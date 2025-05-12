@@ -126,9 +126,6 @@ ng serve -o         # abre http://localhost:4200
 
 Uso educativo / demo. Puedes reutilizar el código citando al autor de la prueba.
 
-¡Listo! Con este README el revisor podrá clonar, lanzar y entender tu proyecto rápidamente.
-
-
 
 ## Additional Resources
 
