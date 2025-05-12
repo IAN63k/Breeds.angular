@@ -1,0 +1,14 @@
+<!-- top-bar.component.html -->
+<mat-toolbar color="primary" class="topbar">
+    <span class="brand">🐾</span>
+    <span class="title">Dog Breeds</span>
+
+    <span class="spacer"></span>
+
+    <button mat-icon-button (click)="toggleFavBar.emit()" aria-label="Ver favoritos">
+        <a mat-button routerLink="/favorites" routerLinkActive="active">Ver favoritos</a>
+        <mat-icon>favorite</mat-icon>
+    </button>
+
+
+</mat-toolbar>

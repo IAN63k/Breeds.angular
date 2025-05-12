@@ -1,0 +1,25 @@
+:root {
+    --bone: #F9F6F2;
+    --charcoal: #3B3A36;
+    --gold: #D6CDAF;
+    --gold-light: #E4E0C8;
+    --gold-dark: #B5A86D;
+    color-scheme: light dark;
+}
+
+
+html, body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bone);
+    color: var(--charcoal);
+}
+
+h1, h2, .mat-card-title {
+    font-family: 'Lora', serif;
+    font-weight: 600;
+    color: var(--charcoal);
+}
+
+a {
+    color: var(--gold);
+}

@@ -1,0 +1,159 @@
+:root {
+  --bone: #f5f5f5;
+  --gold: #ffd700;
+}
+
+.card {
+  margin: 2rem auto;
+  max-width: 1200px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem;
+}
+
+.card .mat-card-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.filters mat-form-field {
+  flex: 1 1 200px;
+  max-width: 200px;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.mdc-line-ripple::before, .mdc-line-ripple::after {
+  display: none !important;
+}
+
+.filters mat-form-field:hover {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* ---- Tabla ---- */
+.table-wrapper {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th.mat-header-cell {
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  background: var(--bone);
+}
+
+table td.mat-cell,
+table th.mat-header-cell {
+  padding: 0.75rem 0.5rem;
+}
+
+table tr.mat-header-row {
+  border-bottom: 2px solid var(--gold);
+}
+
+table tr.mat-row:nth-child(even) {
+  background: #fafafa;
+}
+
+table img {
+  border-radius: 6px;
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+}
+
+/* Botón favorito con transición */
+button.mat-icon-button {
+  transition: color 0.2s ease;
+}
+
+button.mat-icon-button.mat-warn,
+button.mat-icon-button:hover:not(.mat-warn) {
+  color: var(--gold);
+}
+
+/* Skeleton spinner centrado */
+mat-progress-spinner {
+  display: block;
+  margin: 3rem auto;
+}
+
+
+@media (max-width: 768px) {
+  table {
+    display: none;
+  }
+
+  /* oculta tabla */
+  .mat-paginator {
+    display: none;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+  }
+
+  .dog-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+    text-align: center;
+    padding-bottom: 0.5rem;
+  }
+
+  .dog-card img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+  }
+
+  .dog-card h3 {
+    font-family: 'Lora', serif;
+    font-size: 1.1rem;
+    margin: 0.5rem 0 0.25rem;
+  }
+
+  .dog-card p {
+    font-size: 0.75rem;
+    color: #666;
+    margin: 0 0.5rem;
+  }
+}
+
+.row-clickable {
+  cursor: pointer;
+}
+
+.row-clickable:hover {
+  background: var(--surface-muted);
+}
+
+.skeleton {
+  position: relative;
+  height: 56px;
+  border-radius: var(--radius);
+  margin-bottom: .5rem;
+  background: linear-gradient(90deg,#f0f0f0 25%,#e6e6e6 37%,#f0f0f0 63%);
+  background-size: 400% 100%;
+  animation: shimmer 1.1s infinite;
+}
+@keyframes shimmer { 0%{background-position:-400px 0}100%{background-position:400px 0}}

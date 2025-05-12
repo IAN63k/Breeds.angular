@@ -1,0 +1,44 @@
+.topbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #fff;
+}
+
+.title {
+    font-family: 'Lora', serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-left: .5rem;
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+span {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+a.active {
+    color: #fff;
+    font-weight: 600;
+}
+
+button {
+    all: unset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    cursor: pointer;
+
+    &:hover a {
+        color: #300f0f;
+    }
+
+    &:hover mat-icon  {
+        color: red;
+    }
+}
