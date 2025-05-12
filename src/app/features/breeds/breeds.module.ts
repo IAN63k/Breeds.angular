@@ -10,8 +10,18 @@ import { FavoritesComponent } from '../favorites/favorites.component';
 const routes: Routes = [
   { path: '', component: BreedListComponent },
   { path: 'favorites', component: FavoritesComponent },
-  { path: 'breeds', component: BreedListComponent },
+  { path: 'breeds', component: BreedListComponent }
 ];
+
+@NgModule({
+  imports: [
+    CommonModule,
+    RouterModule.forChild(routes),
+    BreedListComponent,
+    FavoritesComponent
+    /* … */
+  ]
+})
 
 export class BreedsModule { }
 
